@@ -6,10 +6,10 @@ public class RestrictedPlaylist extends Playlist{
 	public User[] users;
 	public Song[] songs;
 //constructor
-	public RestrictedPlaylist(String name, int duration, String genres, User[] users){
-		super(name, duration, genres);
+	public RestrictedPlaylist(String name, User[] users){
+		super(name);
 		this.users=users;
-		songs= new Song[MAX_SONGS];
+		songs= new Song[Mcs.MAX_SONGS];
 	}
 //show info
 	public String showInfo(){
@@ -44,7 +44,7 @@ public class RestrictedPlaylist extends Playlist{
 		String message="La cancion ha sido añadida a la playlist";
 		boolean salir=false;
 
-			for(int i=0;i<MAX_SONGS && salir==false;i++){
+			for(int i=0;i<Mcs.MAX_SONGS && salir==false;i++){
 				if (songs[i]==null){
 					songs[i]=song;
 					salir=true;

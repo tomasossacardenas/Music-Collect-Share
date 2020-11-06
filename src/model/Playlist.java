@@ -1,8 +1,6 @@
 package model;
 
 public class Playlist{
-//constants
-	public static int MAX_SONGS=50;
 //atributes
 	protected String name;
 	protected int duration;
@@ -10,11 +8,11 @@ public class Playlist{
 //relations
 	public Song[] songs;
 //constructor
-	public Playlist(String name, int duration, String genres){
+	public Playlist(String name){
 		this.name=name;
-		this.duration=duration;
-		this.genres= genres;
-		songs= new Song[MAX_SONGS];
+		duration=0;
+		genres= "";
+		songs= new Song[Mcs.MAX_SONGS];
 	}
 //getters
 	public String getName(){

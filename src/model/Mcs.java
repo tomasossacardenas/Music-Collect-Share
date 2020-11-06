@@ -364,7 +364,7 @@ public class Mcs{
 		boolean salir=false;
 			for(int i=0;i<MAX_PLAYLISTS && salir==false;i++){
 				if (playlists[i]==null){
-					playlists[i]= new PrivatePlaylist(name, 0, "", returnUser(userName));
+					playlists[i]= new PrivatePlaylist(name, returnUser(userName));
 					salir=true;
 				}
 			}
@@ -385,7 +385,7 @@ public class Mcs{
 		boolean salir=false;
 			for(int i=0;i<MAX_PLAYLISTS && salir==false;i++){
 				if (playlists[i]==null){
-					playlists[i]= new PublicPlaylist(name, 0, "", 0);
+					playlists[i]= new PublicPlaylist(name);
 					salir=true;
 				}
 			}
@@ -408,7 +408,7 @@ public class Mcs{
 		boolean salir=false;
 			for(int i=0;i<MAX_PLAYLISTS && salir==false;i++){
 				if (playlists[i]==null){
-					playlists[i] = new RestrictedPlaylist(name, 0, "", returnUsers(usersQuantity, usersNames));
+					playlists[i] = new RestrictedPlaylist(name, returnUsers(usersQuantity, usersNames));
 					salir=true;
 					message="La playlist restringida ha sido creada";
 				}

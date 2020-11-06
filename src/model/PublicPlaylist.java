@@ -7,9 +7,9 @@ public class PublicPlaylist extends Playlist{
 	//relations
 	public User[] users;
 //constructor
-	public PublicPlaylist(String name, int duration, String genres, int grade){
-		super(name, duration, genres);
-		this.grade=grade;
+	public PublicPlaylist(String name){
+		super(name);
+		grade=0;
 		users= new User[MAX_PUBLIC_USERS];
 	}
 //setters
@@ -25,7 +25,7 @@ public class PublicPlaylist extends Playlist{
 		String message="La cancion ha sido añadida a la playlist";
 		boolean salir=false;
 
-			for(int i=0;i<MAX_SONGS && salir==false;i++){
+			for(int i=0;i<Mcs.MAX_SONGS && salir==false;i++){
 				if (songs[i]==null){
 					songs[i]=song;
 					salir=true;

@@ -4,10 +4,10 @@ public class PrivatePlaylist extends Playlist{
 	public User user;
 	public Song[] songs;
 //constructor
-	public PrivatePlaylist(String name, int duration, String genres, User user){
-		super(name, duration, genres);
+	public PrivatePlaylist(String name,  User user){
+		super(name);
 		this.user=user;
-		songs= new Song[MAX_SONGS];
+		songs= new Song[Mcs.MAX_SONGS];
 	}
 	public String getName(){
 		return name;
@@ -21,7 +21,7 @@ public class PrivatePlaylist extends Playlist{
 		String message="La cancion ha sido añadida a la playlist";
 		boolean salir=false;
 
-			for(int i=0;i<MAX_SONGS && salir==false;i++){
+			for(int i=0;i<Mcs.MAX_SONGS && salir==false;i++){
 				if (songs[i]==null){
 					songs[i]=song;
 					salir=true;
