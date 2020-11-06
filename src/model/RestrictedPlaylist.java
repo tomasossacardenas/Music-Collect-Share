@@ -11,13 +11,23 @@ public class RestrictedPlaylist extends Playlist{
 		this.users=users;
 		songs= new Song[Mcs.MAX_SONGS];
 	}
-//show info
+/**
+* This method shows restricted playlist info. <br>
+*<b>Pos:</b>The playlist information has been shown correctly<br>
+*@return message, a String that is the information of the playlist.
+*/
 	public String showInfo(){
 		String message;
 		message=super.showInfo()+ showUsersNames();
 		return message;
 	}
-//showUsersNames
+/**
+* This method shows the names of the users. <br>
+*<b>Pre:</b>The array users[] must be already created<br>
+*<b>Pos:</b>The users has been shown<br>
+*@param userName , is the user name, userName!=null and userName!="".
+*@return message, String that contains all the usernames of all of users.
+*/
 	public String showUsersNames(){
 		String mensaje="\n Users: ";
 		for(int i=0; i<users.length;i++){
@@ -28,7 +38,13 @@ public class RestrictedPlaylist extends Playlist{
 		mensaje+="\n***********************************************************";
 		return mensaje;
 	}
-
+/**
+* This method verify if a user exists. <br>
+*<b>Pre:</b>The array users[] must be already created<br>
+*<b>Pos:</b>The user has been verified<br>
+*@param userName , is the user name, userName!=null and userName!="".
+*@return exists, a boolean that shows if the user exists or not.
+*/
 	public boolean verifyUser(String userName){
 		boolean exists=false;
 		for (int i=0;i<users.length;i++){
@@ -39,7 +55,13 @@ public class RestrictedPlaylist extends Playlist{
 		return exists;
 		
 	}
-//Add a new song
+/**
+* This method adds a Song. <br>
+*<b>Pre:</b>The array songs[] must be already created<br>
+*<b>Pos:</b>The song has been created correctly<br>
+*@param song , is the song that is going to be added to the array of songs, song!=null
+*@return message, a String that shows if it was possible to create the song or not.
+*/
 	public String addSong(Song song){
 		String message="La cancion ha sido añadida a la playlist";
 		boolean salir=false;

@@ -35,7 +35,12 @@ public class Playlist{
 	public void setGenres(String genres){
 		this.genres=genres;
 	}
-//showInfo
+	
+/**
+* This method shows playlist info. <br>
+*<b>Pos:</b>The playlist information has been shown correctly<br>
+*@return message, a String that is the information of the playlist.
+*/
 	public String showInfo(){
 		String message;
 		message="\n"+

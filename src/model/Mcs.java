@@ -43,7 +43,7 @@ public class Mcs{
 * This method finds a user with an especific name. <br>
 *<b>Pre:</b>The array users[] must be already created<br>
 *<b>Pos:</b>The user has been found or not<br>
-*@param userName is the String of the name of the user
+*@param userName is the String of the name of the user, userName!=null and userName!="".
 *@return found, a boolean that shows if the user had been found or not.
 */
 	public boolean findUser(String userName){
@@ -60,7 +60,7 @@ public class Mcs{
 * This method adds a new user. <br>
 *<b>Pre:</b>The array users[] must be already created<br>
 *<b>Pos:</b>The user has been added correctly<br>
-*@param userName is the String of the name of the user
+*@param userName is the String of the name of the user, userName!=null and userName!="".
 *@param password is the password of the user.
 *@param age is the age of the user.
 *@return message, a String that shows a message to the user if the process was succesfull or not
@@ -72,7 +72,7 @@ public class Mcs{
 		if (found==false){
 			for(int i=0;i<MAX_USERS && salir==false;i++){
 				if (users[i]==null){
-					users[i]=new User(userName, password, age, Category.NEWBIE);
+					users[i]=new User(userName, password, age);
 					salir=true;
 				}
 			}
@@ -90,7 +90,7 @@ public class Mcs{
 * This method shows users info. <br>
 *<b>Pre:</b>The array users[] must be already created<br>
 *<b>Pos:</b>The user information has been shown correctly<br>
-*@param i , it helps to go user by user, showing everything about it.
+*@param i , it helps to go user by user, showing everything about it, i!=null
 *@return message, a String that is the information of the user.
 */
 	public String showInfo(int i){
@@ -106,7 +106,7 @@ public class Mcs{
 * This method shows songs info. <br>
 *<b>Pre:</b>The array songs[] must be already created<br>
 *<b>Pos:</b>The songs information has been shown correctly<br>
-*@param i , it helps to go song by song, showing everything about it.
+*@param i , it helps to go song by song, showing everything about it, i!=null
 *@return message, a String that is the information of the song.
 */
 	public String showSongsInfo(int i){
@@ -121,7 +121,7 @@ public class Mcs{
 * This method shows restricted playlists info. <br>
 *<b>Pre:</b>The array playlists[] must be already created<br>
 *<b>Pos:</b>Class RestrictedPlaylist has to exist<br>
-*@param i , it helps to go restricted playlist one by one, showing everything about it.
+*@param i , it helps to go restricted playlist one by one, showing everything about it, i!=null
 *@return message, a String that is the information of the restrictedPlaylist
 */
 	public String showRestrictedInfo(int i){
@@ -136,7 +136,7 @@ public class Mcs{
 * This method shows private Playlists info. <br>
 *<b>Pre:</b>The array playlists[] must be already created<br>
 *<b>Pos:</b>Class PrivatePlaylist has to exist<br>
-*@param i , it helps to go private playlist one by one, showing everything about it.
+*@param i , it helps to go private playlist one by one, showing everything about it, i!=null.
 *@return message, a String that is the information of the private Playlist
 */
 	public String showPrivateInfo(int i ){
@@ -152,7 +152,7 @@ public class Mcs{
 * This method shows public Playlists info. <br>
 *<b>Pre:</b>The array playlists[] must be already created<br>
 *<b>Pos:</b>Class PublicPlaylist has to exist<br>
-*@param i , it helps to go public playlist one by one, showing everything about it.
+*@param i , it helps to go public playlist one by one, showing everything about it, i!=null.
 *@return message, a String that is the information of the pulblic Playlist
 */
 	public String showPublicInfo(int i ){
@@ -168,12 +168,12 @@ public class Mcs{
 * This method adds a Song. <br>
 *<b>Pre:</b>The array songs[] must be already created<br>
 *<b>Pos:</b>The song has been created correctly<br>
-*@param title , is the title of the song.
-*@param releaseDate , is the date when the song had been released.
-*@param artistName , is the name of the artist of the song
-*@param duration is the duration of the song.
-*@param genre is the genre of the song.
-*@param author is the name of the author.
+*@param title , is the title of the song, title!=null and title!="";
+*@param releaseDate , is the date when the song had been released, releaseDate!=null and releaseDate!="".
+*@param artistName , is the name of the artist of the song, artistName!=null and artistName!="".
+*@param duration is the duration of the song, duration!=null and duration>0.
+*@param genre is the genre of the song, genre!=null.
+*@param author is the name of the author, author!=null and author!="".
 *@return message, a String that shows if it was possible to create the song or not.
 */
 	public String addSong(String title, String releaseDate, String artistName, int duration, GenreSong genre, String author){
@@ -196,7 +196,7 @@ public class Mcs{
 * This method returns a genre depending of the number of the option shown in the menu. <br>
 *<b>Pre:</b>Enum GenreSong must be already created<br>
 *<b>Pos:</b>The genre has been returned correctly<br>
-*@param option , is the number the user chose fo what genre is the song.
+*@param option , is the number the user chose fo what genre is the song, option!=null.
 *@return tp, type GenreSong which means what genre did the user choose.
 */
 	public GenreSong returnGenre(int option){
@@ -306,7 +306,7 @@ public class Mcs{
 * This method returns a Song. <br>
 *<b>Pre:</b>The array songs[] must be already created<br>
 *<b>Pos:</b>The song has been returned correctly<br>
-*@param title , is the title of the song.
+*@param title , is the title of the song, title!=null and title!="".
 *@return songx, Song the song with the title that the user entered.
 */
 	public Song returnSong(String title){
@@ -325,7 +325,7 @@ public class Mcs{
 *<b>Pre:</b>The array songs[] must be already created<br>
 *<b>Pre:</b>The array users[] must be already created<br>
 *<b>Pos:</b>The catefory has been changed correctly<br>
-*@param user , is the User which its category is going to be changed.
+*@param user , is the User which its category is going to be changed, user!=null.
 */
 	public void setUserCategory(User user){
 		int contador=0;
@@ -336,16 +336,16 @@ public class Mcs{
 		}
 		for (int i=0;i< MAX_USERS;i++){
 			if(users[i]!=null && users[i].getUsername().equals(user.getUsername())){
-				if (contador<1){
+				if (contador<3){
 					users[i].setCategory(Category.NEWBIE);
 				}
-				if (contador>=1 && contador<2){
+				if (contador>=3 && contador<10){
 					users[i].setCategory(Category.LITTLE_CONTRIBUTOR);
 				}
-				if (contador>=2 && contador<3){
+				if (contador>=10 && contador<30){
 					users[i].setCategory(Category.MILD_CONTRIBUTOR);
 				}
-				if (contador>=3){
+				if (contador>=30){
 					users[i].setCategory(Category.STAR_CONTRIBUTOR);
 				}
 			}
@@ -376,8 +376,9 @@ public class Mcs{
 /**
 * This method adds a public Playlist. <br>
 *<b>Pre:</b>The array playlists[] must be already created<br>
-*<b>Pos:</b>The playlist has been added correctly<br>
-*@param name , is the name of the playlist, playlistName!=null and playlistName!="".
+*<b>Pos:
+</b>The playlist has been added correctly<br>
+*@param name , is the name of the playlist, name!=null and name!="".
 *@return message, String that shows if the procedure could have been done or not.
 */
 	public String addPlaylist(String name){
@@ -400,7 +401,7 @@ public class Mcs{
 *<b>Pos:</b>The playlist has been added correctly<br>
 *@param name , is the name of the playlist, name!=null and name!="".
 *@param usersNames , is the array of names of the users that are going to have access to the playlist usersNames!=null.
-*@param usersQuantity is the cuantity of users that have acces to the playlist
+*@param usersQuantity is the cuantity of users that have acces to the playlist, usersQuantity!=null.
 *@return message, String that shows if the procedure could have been done or not.
 */
 	public String addPlaylist(String name, String[] usersNames, int usersQuantity){
@@ -423,7 +424,7 @@ public class Mcs{
 *<b>Pre:</b>The array users[] must be already created<br>
 *<b>Pre:</b>The array usersNames[] must be already created<br>
 *<b>Pos:</b>The array has been returned correctly<br>
-*@param usersQuantity is the cuantity of users.
+*@param usersQuantity is the cuantity of users, usersQuantity!=null
 *@param usersNames , is the array of names of the users usersNames!=null.
 *@return users, User an array that contains objects of type User.
 */

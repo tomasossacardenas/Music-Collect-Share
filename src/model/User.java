@@ -12,11 +12,11 @@ public class User{
 	private int age;
 	private Category category;
 //consructor
-	public User(String userName, String password, int age, Category category){
+	public User(String userName, String password, int age){
 		this.userName=userName;
 		this.password=password;
 		this.age=age;
-		this.category=category;
+		category=Category.NEWBIE;
 	}
 
 //getters
@@ -47,7 +47,11 @@ public class User{
 	public void setCategory(Category category){
 		this.category=category;
 	}
-//show Info
+/**
+* This method shows user info. <br>
+*<b>Pos:</b>The user information has been shown correctly<br>
+*@return message, a String that is the information of the user.
+*/
 	public String showInfo(){
 		String message;
 		message="********************* User ***********************"+

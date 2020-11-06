@@ -15,8 +15,13 @@ public class PrivatePlaylist extends Playlist{
 	public User getUser(){
 		return user;
 	}
-
-//Add a new song
+/**
+* This method adds a Song. <br>
+*<b>Pre:</b>The array songs[] must be already created<br>
+*<b>Pos:</b>The song has been created correctly<br>
+*@param song , is the song that is going to be added to the array of songs, song!=null
+*@return message, a String that shows if it was possible to create the song or not.
+*/
 	public String addSong(Song song){
 		String message="La cancion ha sido añadida a la playlist";
 		boolean salir=false;
@@ -33,7 +38,11 @@ public class PrivatePlaylist extends Playlist{
 		return message;
 	}
 
-//showInfo
+/**
+* This method shows playlist info. <br>
+*<b>Pos:</b>The playlist information has been shown correctly<br>
+*@return message, a String that is the information of the playlist.
+*/
 	public String showInfo(){
 		String message;
 		message=super.showInfo()+

@@ -55,6 +55,11 @@ public class Song{
 		this.genre=genre;
 	}
 
+/**
+* This method shows song info. <br>
+*<b>Pos:</b>The song information has been shown correctly<br>
+*@return message, a String that is the information of the song.
+*/
 	public String showInfo(){
 		String message;
 		message="*********************** Song ************************"+
