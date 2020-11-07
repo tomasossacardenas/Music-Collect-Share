@@ -1,8 +1,8 @@
 package model;
 public class PrivatePlaylist extends Playlist{
 //relations
-	public User user;
-	public Song[] songs;
+	public User user;// this class has a relation with user, it means an object of this class could have just one user.
+	public Song[] songs;// this class has a relation with songs, it means an object of this class could have more than one song
 //constructor
 	public PrivatePlaylist(String name,  User user){
 		super(name);

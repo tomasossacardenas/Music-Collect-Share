@@ -3,9 +3,9 @@ public class PublicPlaylist extends Playlist{
 	//constants
 	public static int MAX_PUBLIC_USERS=10;
 	//atributes
-	private int grade;
+	private int grade;//is the grade the user is going to give to the playlist
 	//relations
-	public User[] users;
+	public User[] users;//This class has a relation with users, it means a restricted playlist could have more than one user 
 //constructor
 	public PublicPlaylist(String name){
 		super(name);

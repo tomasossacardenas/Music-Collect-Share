@@ -4,12 +4,12 @@ enum GenreSong{
 }
 public class Song{
 //atributes
-	private String title;
-	private String releaseDate;
-	private String artistName;
-	private int duration;
-	private GenreSong genre;
-	private User author;
+	private String title;//title of the song
+	private String releaseDate;//when was the song released
+	private String artistName;//the name of the author of the song
+	private int duration;//duration of the song
+	private GenreSong genre;//genre of the song it has to be a GenreSong type
+	private User author;//the user that upload the song to the mcs
 //constructor
 	public Song(String title, String releaseDate, String artistName, int duration, GenreSong genre, User author){
 		this.title=title;

@@ -2,11 +2,11 @@ package model;
 
 public class Playlist{
 //atributes
-	protected String name;
-	protected int duration;
-	protected String genres;
+	protected String name;//name of the playlist
+	protected int duration;//the duration of the playlist depending on the duration of all of its songs.
+	protected String genres;//The genres that the playlist has depending on the genres of each song.
 //relations
-	public Song[] songs;
+	public Song[] songs;// this class has a relation with songs, it means an object of this class could have more than one song
 //constructor
 	public Playlist(String name){
 		this.name=name;

@@ -7,10 +7,10 @@ public class User{
 //constants
 	public static int MAX_USERS=10;
 //atributes
-	private String userName;
-	private String password;
-	private int age;
-	private Category category;
+	private String userName;// the name of the user
+	private String password;//the password of the user
+	private int age;//the age of the user
+	private Category category;//the category of the user, it has to be Category type.
 //consructor
 	public User(String userName, String password, int age){
 		this.userName=userName;

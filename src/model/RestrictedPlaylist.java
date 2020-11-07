@@ -1,10 +1,10 @@
 package model;
 public class RestrictedPlaylist extends Playlist{
 	//constants
-	public static int MAX_RESTRICTED_USERS=5;
+	public static int MAX_RESTRICTED_USERS=5;//constant that shows that there is a limit of users for restrictedPlaylist
 	//relations
-	public User[] users;
-	public Song[] songs;
+	public User[] users;//This class has a relation with users, it means a restricted playlist could have more than one user 
+	public Song[] songs;// this class has a relation with songs, it means an object of this class could have more than one song
 //constructor
 	public RestrictedPlaylist(String name, User[] users){
 		super(name);
